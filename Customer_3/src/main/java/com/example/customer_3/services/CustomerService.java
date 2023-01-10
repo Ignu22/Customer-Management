@@ -15,4 +15,8 @@ public interface CustomerService {
 
 	ResponseEntity<CustomerWrapper> getCustomer(Integer id);
 
+	ResponseEntity<String> deleteCustomer(Integer id);
+
+	ResponseEntity<Customer> updateCustomer(Integer id, Customer customer);
+
 }
