@@ -4,7 +4,7 @@ import CustomerService from "../services/CustomerService";
 
 const AddCustomer = () => {
   const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
+  const [phone, setphone] = useState("");
   const [street, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
@@ -14,10 +14,10 @@ const AddCustomer = () => {
 
   const saveCustomer = (e) => {
     e.preventDefault();
-
-    const customer = {name, number, street, city, state, country, description}
-    console.log(customer)
-    CustomerService.createCustomer().then((response) =>{
+    const address = {street, city, state, country}
+    const customers = {name, phone, address, description}
+    console.log(customers)
+    CustomerService.createCustomer(customers).then((response) =>{
       console.log(response.data)
       navigate('/customer');
 
@@ -49,14 +49,14 @@ const AddCustomer = () => {
                   ></input>
                 </div>
                 <div className="form-group mb-2">
-                  <label className="form-label"> Number :</label>
+                  <label className="form-label"> Phone Number :</label>
                   <input
                     type="text"
-                    placeholder="Enter Number"
-                    name="Number"
+                    placeholder="Enter Phone Number"
+                    name="phone"
                     className="form-control"
-                    value={number}
-                    onChange={(e) => setNumber(e.target.value)}
+                    value={phone}
+                    onChange={(e) => setphone(e.target.value)}
                   ></input>
                 </div>
                 <div className="form-group mb-2">

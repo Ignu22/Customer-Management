@@ -8,8 +8,8 @@ class CustomerService{
         return axios.get(CUSTOMER_BASE_API_URL+"/getAll");
     }
 
-    createCustomer(){
-        return axios.post(CUSTOMER_BASE_API_URL+"/add");
+    createCustomer(customers){
+        return axios.post(CUSTOMER_BASE_API_URL+"/add",customers);
     }
 }
 
