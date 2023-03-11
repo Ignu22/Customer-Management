@@ -5,6 +5,7 @@ import CustomerList from './component/CustomerList';
 import Header from './component/Header';
 import AddCustomer from './component/AddCustomer';
 import LoginCustomer from './component/LoginCustomer';
+import SignUpCustomer from './component/SignUpCustomer';
 
 function App() {
   return (
@@ -12,10 +13,10 @@ function App() {
       <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path='/' element={<LoginCustomer/>}/>
-        {/*<Route path='/' element={<CustomerList/>}/>
+        <Route path='/login' element={<LoginCustomer/>}/>
+        <Route path='/signup' element={<SignUpCustomer/>}/>
         <Route path='/customer' element={<CustomerList/>}/>
-  <Route path='/add-customer' element={<AddCustomer/>}/>*/}
+        <Route path='/add-customer' element={<AddCustomer/>}/>
       </Routes>
       </BrowserRouter>
     </div>

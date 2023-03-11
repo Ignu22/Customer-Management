@@ -23,6 +23,7 @@ const CustomerList = ()  => {
     <div className='container'>
         <h2 className='text-left'>Customer Details</h2>
          <Link to={"/add-customer"} className = "btn btn-primary mb-2" >Add Customer</Link> 
+         <Link to={"/login"} className = "btn btn-primary mb-2" >Logout</Link> 
               <table className='table table-bordered table-striped'>
             <thead>
                 <th> Customer id</th>

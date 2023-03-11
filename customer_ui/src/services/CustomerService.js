@@ -11,6 +11,14 @@ class CustomerService{
     createCustomer(customers){
         return axios.post(CUSTOMER_BASE_API_URL+"/add",customers);
     }
+
+    loginCustomer(login){
+        return axios.post(CUSTOMER_BASE_API_URL+"/login",login);
+    }
+
+    signupCustomer(signup){
+        return axios.post(CUSTOMER_BASE_API_URL+"/signup",signup)
+    }
 }
 
 export default new CustomerService();
